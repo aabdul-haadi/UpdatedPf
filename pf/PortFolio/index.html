@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Modern Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade {
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(to right, #00ffe0, #007bff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Hover Glow Effect */
+    .hover-glow:hover {
+      box-shadow: 0 0 15px #00ffe0, 0 0 30px #007bff;
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    /* Skill Images */
+    .skill-img {
+      width: 60px;
+      height: 60px;
+      margin: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans leading-relaxed">
+
+  <!-- Header -->
+  <header class="fixed w-full z-50 bg-gray-800 shadow-lg">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold gradient-text">ABDUL HAADI</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#about" class="hover:text-cyan-400">About</a>
+        <a href="#projects" class="hover:text-cyan-400">Projects</a>
+        <a href="#skills" class="hover:text-cyan-400">Skills</a>
+        <a href="#contact" class="hover:text-cyan-400">Contact</a>
+      </nav>
+      <button class="md:hidden text-cyan-400 focus:outline-none">
+        ☰
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="h-screen flex flex-col md:flex-row justify-center items-center bg-gradient-to-br from-gray-800 via-gray-900 to-black text-center">
+    <div class="md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left px-4">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold gradient-text animate-fade">Welcome to My Portfolio</h1>
+      <p class="mt-4 text-lg sm:text-xl font-medium text-cyan-400 animate-fade">I am a Web Developer</p>
+      <p class="mt-4 text-sm sm:text-lg md:text-xl text-gray-300 animate-fade">
+        I create modern, responsive websites and applications that blend functionality with aesthetics.
+      </p>
+      <div class="mt-8 flex space-x-4">
+        <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-gray-900 font-bold rounded-lg shadow-lg hover:opacity-90 transition-all duration-300">
+          Explore Projects
+        </a>
+        <a href="assets/cv.pdf" download class="px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-gray-900 font-bold rounded-lg shadow-lg hover:opacity-90 transition-all duration-300">
+          Download CV
+        </a>
+      </div>
+    </div>
+    <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center px-4">
+      <img src="assets/3.png" alt="Hero Image" class="w-2/3 sm:w-1/2 md:w-2/3 h-auto rounded-lg shadow-md hover-glow transition-transform duration-300">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 bg-gray-800">
+    <div class="container mx-auto text-center px-4">
+      <h2 class="text-3xl sm:text-4xl font-bold gradient-text mb-6 animate-fade">About Me</h2>
+      <p class="text-sm sm:text-lg md:text-lg text-gray-300 leading-loose max-w-2xl mx-auto animate-fade">
+        I am a passionate Web Developer with expertise in creating interactive and user-friendly web applications. My goal is to craft digital experiences that combine functionality with visually stunning designs, ensuring a seamless experience for all users.
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects" class="py-20 px-6 bg-black">
+  <div class="container mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl font-bold gradient-text mb-6 animate-fade">Projects</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Choose Emotions -->
+      <div class="bg-gray-900 shadow-md rounded-lg hover-glow transition-transform duration-300">
+        <img src="/PortFolio/assets/choose.png" alt="Choose Emotions" class="rounded-t-lg">
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-cyan-400">Choose Emotions</h3>
+          <p class="text-gray-300 mt-2">An app designed to manage and track your emotions daily.</p>
+          <a href="/Choose Emotions/index.html" target="_blank" class="text-cyan-400 underline hover:text-cyan-500">View Project</a>
+        </div>
+      </div>
+      <!-- Clock -->
+      <div class="bg-gray-900 shadow-md rounded-lg hover-glow transition-transform duration-300">
+        <img src="/PortFolio/assets/clock.png" alt="Clock" class="rounded-t-lg">
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-cyan-400">Clock</h3>
+          <p class="text-gray-300 mt-2">A digital clock with elegant design and real-time updates.</p>
+          <a href="/clock/index.html" target="_blank" class="text-cyan-400 underline hover:text-cyan-500">View Project</a>
+        </div>
+      </div>
+      <!-- Discount -->
+      <div class="bg-gray-900 shadow-md rounded-lg hover-glow transition-transform duration-300">
+        <img src="/PortFolio/assets/shoes.png" alt="Discount App" class="rounded-t-lg">
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-cyan-400">Discount Calculator</h3>
+          <p class="text-gray-300 mt-2">A tool to calculate discounts and savings in real-time.</p>
+          <a href="/discount/index.html" target="_blank" class="text-cyan-400 underline hover:text-cyan-500">View Project</a>
+        </div>
+      </div>
+      <!-- Login -->
+      <div class="bg-gray-900 shadow-md rounded-lg hover-glow transition-transform duration-300">
+        <img src="/PortFolio/assets/login.png" alt="Login Page" class="rounded-t-lg">
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-cyan-400">Login System</h3>
+          <p class="text-gray-300 mt-2">A responsive login and registration page design.</p>
+          <a href="/login/index.html" target="_blank" class="text-cyan-400 underline hover:text-cyan-500">View Project</a>
+        </div>
+      </div>
+      <!-- TalkToAllah -->
+      <div class="bg-gray-900 shadow-md rounded-lg hover-glow transition-transform duration-300">
+        <img src="/PortFolio/assets/talktoAllah.png" alt="TalkToAllah" class="rounded-t-lg">
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-cyan-400">Talk To Allah</h3>
+          <p class="text-gray-300 mt-2">A spiritual guide app for daily reminders and prayers.</p>
+          <a href="/TalkToAllah/1.html" target="_blank" class="text-cyan-400 underline hover:text-cyan-500">View Project</a>
+        </div>
+      </div>
+      <!-- Wheel Project -->
+      <div class="bg-gray-900 shadow-md rounded-lg hover-glow transition-transform duration-300">
+        <img src="/PortFolio/assets/wheel.webp" alt="Wheel Project" class="rounded-t-lg">
+        <div class="p-4">
+          <h3 class="text-xl font-bold text-cyan-400">Wheel Project</h3>
+          <p class="text-gray-300 mt-2">A fun spinning wheel project for gamification and selection.</p>
+          <a href="/wheel project/index.html" target="_blank" class="text-cyan-400 underline hover:text-cyan-500">View Project</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 px-6 bg-gray-800">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold gradient-text mb-6 animate-fade">Skills</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Skill Card 1 -->
+        <div class="p-6 rounded-lg bg-gray-900 shadow-md hover-glow transition-transform duration-300 text-center">
+          <img src="assets/html.png" alt="HTML" class="skill-img">
+          <h3 class="text-xl font-bold text-cyan-400 mt-4">HTML</h3>
+        </div>
+        <!-- Skill Card 2 -->
+        <div class="p-6 rounded-lg bg-gray-900 shadow-md hover-glow transition-transform duration-300 text-center">
+          <img src="assets/css.png" alt="CSS" class="skill-img">
+          <h3 class="text-xl font-bold text-cyan-400 mt-4">CSS</h3>
+        </div>
+        <!-- Skill Card 3 -->
+        <div class="p-6 rounded-lg bg-gray-900 shadow-md hover-glow transition-transform duration-300 text-center">
+          <img src="assets/js.png" alt="JavaScript" class="skill-img">
+          <h3 class="text-xl font-bold text-cyan-400 mt-4">JavaScript</h3>
+        </div>
+        <!-- Skill Card 4 -->
+        <div class="p-6 rounded-lg bg-gray-900 shadow-md hover-glow transition-transform duration-300 text-center">
+          <img src="assets/php.png" alt="PHP" class="skill-img">
+          <h3 class="text-xl font-bold text-cyan-400 mt-4">PHP</h3>
+        </div>
+        <!-- Skill Card 5 -->
+        <div class="p-6 rounded-lg bg-gray-900 shadow-md hover-glow transition-transform duration-300 text-center">
+          <img src="assets/sql.png" alt="SQL" class="skill-img">
+          <h3 class="text-xl font-bold text-cyan-400 mt-4">SQL</h3>
+        </div>
+        <!-- Skill Card 6 -->
+        <div class="p-6 rounded-lg bg-gray-900 shadow-md hover-glow transition-transform duration-300 text-center">
+          <img src="assets/wp.png" alt="WordPress" class="skill-img">
+          <h3 class="text-xl font-bold text-cyan-400 mt-4">WordPress</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 px-6 bg-gray-900">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl font-bold gradient-text mb-6 animate-fade">Contact Me</h2>
+      <form class="max-w-lg mx-auto space-y-6">
+        <input type="text" placeholder="Your Name" class="w-full px-4 py-2 bg-gray-800 text-gray-100 rounded-lg focus:ring-2 focus:ring-cyan-400">
+        <input type="email" placeholder="Your Email" class="w-full px-4 py-2 bg-gray-800 text-gray-100 rounded-lg focus:ring-2 focus:ring-cyan-400">
+        <textarea placeholder="Your Message" class="w-full px-4 py-2 bg-gray-800 text-gray-100 rounded-lg focus:ring-2 focus:ring-cyan-400"></textarea>
+        <button type="submit" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-gray-900 font-bold rounded-lg shadow-lg hover:opacity-90 transition-all duration-300">Send</button>
+      </form>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="py-6 bg-black text-center">
+    <p class="text-gray-500">© 2024 ABDUL HAADI. All rights reserved.</p>
+  </footer>
+</body>
+</html>

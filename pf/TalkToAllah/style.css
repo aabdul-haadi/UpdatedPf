@@ -1,0 +1,251 @@
+/* Base body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #0a0a0a;
+}
+
+/* Animated background layers */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+    opacity: 0.2;
+    background: radial-gradient(circle, rgba(20, 20, 20, 1) 20%, transparent 70%);
+    animation: rotation 20s linear infinite alternate, move 15s ease-in-out infinite;
+}
+
+body::before {
+    background: radial-gradient(circle, rgba(70, 70, 70, 0.5) 25%, transparent 70%);
+    animation-delay: -10s;
+    transform: rotate(15deg);
+}
+
+body::after {
+    background: radial-gradient(circle, rgba(30, 30, 30, 0.3) 20%, transparent 80%);
+    transform: rotate(-15deg);
+}
+
+@keyframes rotation {
+    0% { transform: scale(1.1) rotate(0); }
+    100% { transform: scale(1.3) rotate(360deg); }
+}
+
+@keyframes move {
+    0%, 100% { transform: translateX(-10%) translateY(-10%); }
+    50% { transform: translateX(10%) translateY(10%); }
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(30, 30, 30, 0.9);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Title and verse styles */
+h1 {
+    color: #bbdefb;
+    font-size: 2.5em;
+    margin: 0 0 15px;
+    animation: fadeIn 2s ease-out;
+}
+
+.verse {
+    font-size: 1.5em;
+    margin: 20px 0;
+    font-style: italic;
+    color: #e0e0e0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Prompt and button styling */
+.prompt {
+    margin: 25px 0;
+    color: #c5cae9;
+}
+
+.emotion-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.emotion-button {
+    background-color: #90caf9;
+    color: #0a0a0a;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.emotion-button:hover {
+    background-color: #64b5f6;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(144, 202, 249, 0.5);
+}
+
+/* Verse response section */
+.emotion-verse {
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: #b0bec5;
+    animation: fadeInUp 1.5s ease forwards;
+}
+
+@keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+
+/* Base body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #0a0a0a;
+}
+
+/* Bubble Animation Effect */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at bottom, rgba(70, 70, 70, 0.3), transparent);
+    animation: bubbleMove 20s infinite linear;
+    opacity: 0.5;
+}
+
+body::after {
+    background: radial-gradient(circle at top, rgba(40, 40, 40, 0.3), transparent);
+    animation-duration: 15s;
+    animation-direction: reverse;
+    transform: scale(1.2);
+}
+
+@keyframes bubbleMove {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-100%); }
+}
+
+/* Container styling */
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: rgba(30, 30, 30, 0.9);
+    box-shadow: 1px 10px 30px rgba(107, 100, 50, 0.8);
+}
+
+/* Title and verse styles */
+h1 {
+    color: #bbdefb;
+    font-size: 2.5em;
+    margin: 0 0 15px;
+}
+
+.verse {
+    font-size: 1.5em;
+    margin: 20px 0;
+    font-style: italic;
+    color: #e0e0e0;
+}
+
+.prompt {
+    margin: 25px 0;
+    color: #c5cae9;
+}
+
+.emotion-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.emotion-button {
+    background-color: #90caf9;
+    color: #0a0a0a;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.emotion-button:hover {
+    background-color: #64b5f6;
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(144, 202, 249, 0.5);
+}
+
+.emotion-verse {
+    margin-top: 20px;
+    font-size: 1.3em;
+    color: #b0bec5;
+}
+
+
+/* Fade-in and fade-out animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s ease forwards;
+}
+
+
+
+
+
